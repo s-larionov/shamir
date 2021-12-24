@@ -34,7 +34,7 @@ Pre-requirements:
 cat source.txt | bin/encrypt -parts 6 -threshhold 3 -output encoded.txt
 ```
 
-### Decrypt file with minimal required parts of the key
+## Decrypt file with required parts of the key
 
 Pre-requirements:
 - Required parts: 3
