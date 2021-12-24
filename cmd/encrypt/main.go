@@ -58,12 +58,12 @@ func main() {
 		panic(err)
 	}
 
-	encrypted, err := crypto.EncryptSimple(key, input)
+	encrypted, nonce, err := crypto.Encrypt(key, input)
 	if err != nil {
 		panic(err)
 	}
 
-	keyParts, err := shamir.Split(key, parts, threshold)
+	keyParts, err := shamir.Split(append(key, nonce...), parts, threshold)
 	if err != nil {
 		panic(err)
 	}

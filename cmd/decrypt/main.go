@@ -43,13 +43,13 @@ func main() {
 		return
 	}
 
-	key, err := shamir.Combine(keyParts)
+	keyWithNonce, err := shamir.Combine(keyParts)
 	if err != nil {
 		printUsage(fmt.Sprintf("Unable to combine key: %s", err.Error()))
 		return
 	}
 
-	decrypted, err := crypto.DecryptSimple(key, input)
+	decrypted, err := crypto.Decrypt(keyWithNonce[:32], keyWithNonce[32:], input)
 	if err != nil {
 		printUsage(fmt.Sprintf("Decryption error: %s", err.Error()))
 		return
