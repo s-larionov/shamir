@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"shamir/pkg/crypto"
-	"shamir/pkg/shamir"
+	"github.com/s-larionov/shamir/pkg/crypto"
+	"github.com/s-larionov/shamir/pkg/shamir"
 )
 
 var (

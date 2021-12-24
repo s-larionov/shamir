@@ -7,8 +7,8 @@ import (
 	"io"
 	"os"
 
-	"shamir/pkg/crypto"
-	"shamir/pkg/shamir"
+	"github.com/s-larionov/shamir/pkg/crypto"
+	"github.com/s-larionov/shamir/pkg/shamir"
 )
 
 const (
